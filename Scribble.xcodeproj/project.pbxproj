@@ -14,6 +14,8 @@
 		408C0B351D1AB416003237E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 408C0B331D1AB416003237E3 /* LaunchScreen.storyboard */; };
 		408C0B401D1AB416003237E3 /* ScribbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B3F1D1AB416003237E3 /* ScribbleTests.swift */; };
 		408C0B4B1D1AB416003237E3 /* ScribbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B4A1D1AB416003237E3 /* ScribbleUITests.swift */; };
+		408C0B5A1D1AB9A6003237E3 /* ScribbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B591D1AB9A6003237E3 /* ScribbleView.swift */; };
+		408C0B5C1D1ABA3F003237E3 /* DrawingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B5B1D1ABA3F003237E3 /* DrawingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		408C0B461D1AB416003237E3 /* ScribbleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScribbleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		408C0B4A1D1AB416003237E3 /* ScribbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribbleUITests.swift; sourceTree = "<group>"; };
 		408C0B4C1D1AB416003237E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		408C0B591D1AB9A6003237E3 /* ScribbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribbleView.swift; sourceTree = "<group>"; };
+		408C0B5B1D1ABA3F003237E3 /* DrawingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		408C0B291D1AB416003237E3 /* Scribble */ = {
 			isa = PBXGroup;
 			children = (
+				408C0B581D1AB986003237E3 /* Drawing */,
 				408C0B2A1D1AB416003237E3 /* AppDelegate.swift */,
 				408C0B2C1D1AB416003237E3 /* ViewController.swift */,
 				408C0B2E1D1AB416003237E3 /* Main.storyboard */,
@@ -123,6 +128,15 @@
 				408C0B4C1D1AB416003237E3 /* Info.plist */,
 			);
 			path = ScribbleUITests;
+			sourceTree = "<group>";
+		};
+		408C0B581D1AB986003237E3 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				408C0B591D1AB9A6003237E3 /* ScribbleView.swift */,
+				408C0B5B1D1ABA3F003237E3 /* DrawingModel.swift */,
+			);
+			name = Drawing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +272,8 @@
 			files = (
 				408C0B2D1D1AB416003237E3 /* ViewController.swift in Sources */,
 				408C0B2B1D1AB416003237E3 /* AppDelegate.swift in Sources */,
+				408C0B5C1D1ABA3F003237E3 /* DrawingModel.swift in Sources */,
+				408C0B5A1D1AB9A6003237E3 /* ScribbleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
