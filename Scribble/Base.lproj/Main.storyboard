@@ -81,20 +81,54 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLt-kl-YDY">
+                                <rect key="frame" x="20" y="175" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.5" maxValue="13.5" translatesAutoresizingMaskIntoConstraints="NO" id="5n7-CN-iK9">
+                                <rect key="frame" x="18" y="209" width="564" height="31"/>
+                                <connections>
+                                    <action selector="colorValueChanged:" destination="T6A-zC-xIZ" eventType="valueChanged" id="29t-HL-A4x"/>
+                                </connections>
+                            </slider>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="colors" translatesAutoresizingMaskIntoConstraints="NO" id="kCE-Tt-Fqt">
+                                <rect key="frame" x="20" y="247" width="560" height="50"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3je-TR-iCi">
+                                <rect key="frame" x="180" y="325" width="240" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="J6O-Ew-qBq"/>
+                                    <constraint firstAttribute="width" constant="240" id="fju-pl-OZv"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="47h-Fy-QgN" firstAttribute="trailing" secondItem="0IY-m0-iGw" secondAttribute="trailingMargin" id="AkD-bG-gVq"/>
+                            <constraint firstItem="kCE-Tt-Fqt" firstAttribute="leading" secondItem="0IY-m0-iGw" secondAttribute="leadingMargin" id="CyD-Ow-bIM"/>
+                            <constraint firstItem="5n7-CN-iK9" firstAttribute="leading" secondItem="0IY-m0-iGw" secondAttribute="leadingMargin" id="H2U-zA-QF3"/>
+                            <constraint firstItem="xLt-kl-YDY" firstAttribute="top" secondItem="47h-Fy-QgN" secondAttribute="bottom" constant="39" id="OOC-Dx-bN4"/>
                             <constraint firstItem="8VC-0c-AL6" firstAttribute="top" secondItem="HLA-fC-eAN" secondAttribute="bottom" constant="8" id="OUF-tN-kST"/>
+                            <constraint firstItem="5n7-CN-iK9" firstAttribute="top" secondItem="xLt-kl-YDY" secondAttribute="bottom" constant="13" id="Tdo-1C-6Xr"/>
+                            <constraint firstItem="xLt-kl-YDY" firstAttribute="leading" secondItem="0IY-m0-iGw" secondAttribute="leadingMargin" id="UBZ-EN-YSA"/>
                             <constraint firstItem="1LK-i1-qQ9" firstAttribute="leading" secondItem="0IY-m0-iGw" secondAttribute="leadingMargin" id="XCd-x8-1q4"/>
+                            <constraint firstItem="5n7-CN-iK9" firstAttribute="trailing" secondItem="0IY-m0-iGw" secondAttribute="trailingMargin" id="ZB0-FV-gGm"/>
                             <constraint firstItem="1LK-i1-qQ9" firstAttribute="trailing" secondItem="0IY-m0-iGw" secondAttribute="trailingMargin" id="dTe-Q1-ofP"/>
+                            <constraint firstItem="3je-TR-iCi" firstAttribute="centerX" secondItem="0IY-m0-iGw" secondAttribute="centerX" id="e3V-L7-P0j"/>
+                            <constraint firstItem="kCE-Tt-Fqt" firstAttribute="top" secondItem="5n7-CN-iK9" secondAttribute="bottom" constant="8" id="eQi-1w-7dl"/>
                             <constraint firstAttribute="leadingMargin" secondItem="8VC-0c-AL6" secondAttribute="leading" id="g3t-lE-Fdp"/>
                             <constraint firstItem="1LK-i1-qQ9" firstAttribute="top" secondItem="8VC-0c-AL6" secondAttribute="bottom" constant="20" id="gkz-we-h9c"/>
+                            <constraint firstItem="kCE-Tt-Fqt" firstAttribute="trailing" secondItem="0IY-m0-iGw" secondAttribute="trailingMargin" id="jQf-3d-2VG"/>
                             <constraint firstItem="47h-Fy-QgN" firstAttribute="top" secondItem="1LK-i1-qQ9" secondAttribute="bottom" constant="16" id="jp7-gH-weE"/>
+                            <constraint firstItem="3je-TR-iCi" firstAttribute="top" secondItem="kCE-Tt-Fqt" secondAttribute="bottom" constant="28" id="nCR-yf-Cg3"/>
                             <constraint firstItem="47h-Fy-QgN" firstAttribute="leading" secondItem="0IY-m0-iGw" secondAttribute="leadingMargin" id="ni5-cQ-VN9"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorSampler" destination="3je-TR-iCi" id="6bT-U5-Mab"/>
                         <outlet property="sliderSizeLabel" destination="47h-Fy-QgN" id="eS9-qk-ki8"/>
                     </connections>
                 </viewController>
@@ -121,4 +155,7 @@
             <point key="canvasLocation" x="301" y="994"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="colors" width="700" height="50"/>
+    </resources>
 </document>
