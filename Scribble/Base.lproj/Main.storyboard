@@ -25,7 +25,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwy-lW-XIT">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="New" id="WFN-Kk-3Pn"/>
+                                    <barButtonItem title="New" id="WFN-Kk-3Pn">
+                                        <connections>
+                                            <action selector="newTapped:" destination="BYZ-38-t0r" id="Ga4-B3-5iC"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

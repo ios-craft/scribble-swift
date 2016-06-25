@@ -26,6 +26,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func newTapped(sender: AnyObject) {
+        drawing = Stroke()
+        scribbleView.mark = drawing
+        scribbleView.setNeedsDisplay()
+    }
+    
+
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let loc = touches.first?.locationInView(scribbleView) {
             print("TOUCH \(loc)")
