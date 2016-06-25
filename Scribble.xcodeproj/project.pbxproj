@@ -17,6 +17,7 @@
 		408C0B5A1D1AB9A6003237E3 /* ScribbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B591D1AB9A6003237E3 /* ScribbleView.swift */; };
 		408C0B5C1D1ABA3F003237E3 /* DrawingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B5B1D1ABA3F003237E3 /* DrawingModel.swift */; };
 		408C0B691D1F292A003237E3 /* PaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B681D1F292A003237E3 /* PaletteViewController.swift */; };
+		408C0B631D1EF7DD003237E3 /* Scribble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B621D1EF7DD003237E3 /* Scribble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		408C0B591D1AB9A6003237E3 /* ScribbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribbleView.swift; sourceTree = "<group>"; };
 		408C0B5B1D1ABA3F003237E3 /* DrawingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingModel.swift; sourceTree = "<group>"; };
 		408C0B681D1F292A003237E3 /* PaletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaletteViewController.swift; sourceTree = "<group>"; };
+		408C0B621D1EF7DD003237E3 /* Scribble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scribble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		408C0B291D1AB416003237E3 /* Scribble */ = {
 			isa = PBXGroup;
 			children = (
+				408C0B611D1EF7CE003237E3 /* Logic */,
 				408C0B581D1AB986003237E3 /* Drawing */,
 				408C0B2A1D1AB416003237E3 /* AppDelegate.swift */,
 				408C0B2C1D1AB416003237E3 /* ViewController.swift */,
@@ -140,6 +143,14 @@
 				408C0B5B1D1ABA3F003237E3 /* DrawingModel.swift */,
 			);
 			name = Drawing;
+			sourceTree = "<group>";
+		};
+		408C0B611D1EF7CE003237E3 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				408C0B621D1EF7DD003237E3 /* Scribble.swift */,
+			);
+			name = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +286,7 @@
 			files = (
 				408C0B2D1D1AB416003237E3 /* ViewController.swift in Sources */,
 				408C0B691D1F292A003237E3 /* PaletteViewController.swift in Sources */,
+				408C0B631D1EF7DD003237E3 /* Scribble.swift in Sources */,
 				408C0B2B1D1AB416003237E3 /* AppDelegate.swift in Sources */,
 				408C0B5C1D1ABA3F003237E3 /* DrawingModel.swift in Sources */,
 				408C0B5A1D1AB9A6003237E3 /* ScribbleView.swift in Sources */,

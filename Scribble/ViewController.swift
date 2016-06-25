@@ -12,13 +12,12 @@ class ViewController: UIViewController {
 
     @IBOutlet var scribbleView: ScribbleView!
     
-    var drawing:Stroke = Stroke()
-    var currentStroke:Stroke = Stroke()
+    let scribble = Scribble()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        scribbleView.mark = drawing
+        scribbleView.mark = scribble.rootStroke
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,8 +26,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func newTapped(sender: AnyObject) {
-        drawing = Stroke()
-        scribbleView.mark = drawing
+        scribble.reset()
+        scribbleView.mark = scribble.rootStroke
         scribbleView.setNeedsDisplay()
     }
     
@@ -37,16 +36,14 @@ class ViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let loc = touches.first?.locationInView(scribbleView) {
             print("TOUCH \(loc)")
-            currentStroke = Stroke(location:loc)
-            drawing.addChild(currentStroke)
-            
+            scribble.beginMark(loc)
         }
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let loc = touches.first?.locationInView(scribbleView) {
             print("LINE \(loc)")
-            currentStroke.addChild(Vertex(location: loc))
+            scribble.appendToCurrentMark(Vertex(location: loc))
             scribbleView.setNeedsDisplay()
         }
     }
@@ -54,9 +51,7 @@ class ViewController: UIViewController {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let loc = touches.first?.locationInView(scribbleView) {
             print("END \(loc)")
-            if currentStroke.isEmpty() {
-                currentStroke.addChild(Dot(location: loc))
-            }
+            scribble.finishMark(loc)
         }
         scribbleView.setNeedsDisplay()
         
