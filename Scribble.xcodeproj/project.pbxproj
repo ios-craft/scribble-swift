@@ -16,6 +16,7 @@
 		408C0B4B1D1AB416003237E3 /* ScribbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B4A1D1AB416003237E3 /* ScribbleUITests.swift */; };
 		408C0B5A1D1AB9A6003237E3 /* ScribbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B591D1AB9A6003237E3 /* ScribbleView.swift */; };
 		408C0B5C1D1ABA3F003237E3 /* DrawingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B5B1D1ABA3F003237E3 /* DrawingModel.swift */; };
+		408C0B691D1F292A003237E3 /* PaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B681D1F292A003237E3 /* PaletteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		408C0B4C1D1AB416003237E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		408C0B591D1AB9A6003237E3 /* ScribbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribbleView.swift; sourceTree = "<group>"; };
 		408C0B5B1D1ABA3F003237E3 /* DrawingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingModel.swift; sourceTree = "<group>"; };
+		408C0B681D1F292A003237E3 /* PaletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaletteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				408C0B311D1AB416003237E3 /* Assets.xcassets */,
 				408C0B331D1AB416003237E3 /* LaunchScreen.storyboard */,
 				408C0B361D1AB416003237E3 /* Info.plist */,
+				408C0B681D1F292A003237E3 /* PaletteViewController.swift */,
 			);
 			path = Scribble;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				408C0B2D1D1AB416003237E3 /* ViewController.swift in Sources */,
+				408C0B691D1F292A003237E3 /* PaletteViewController.swift in Sources */,
 				408C0B2B1D1AB416003237E3 /* AppDelegate.swift in Sources */,
 				408C0B5C1D1ABA3F003237E3 /* DrawingModel.swift in Sources */,
 				408C0B5A1D1AB9A6003237E3 /* ScribbleView.swift in Sources */,
@@ -500,6 +504,7 @@
 				408C0B511D1AB416003237E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		408C0B521D1AB416003237E3 /* Build configuration list for PBXNativeTarget "ScribbleTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +513,7 @@
 				408C0B541D1AB416003237E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		408C0B551D1AB416003237E3 /* Build configuration list for PBXNativeTarget "ScribbleUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +522,7 @@
 				408C0B571D1AB416003237E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

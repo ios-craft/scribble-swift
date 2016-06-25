@@ -44,11 +44,63 @@
                     <navigationItem key="navigationItem" id="ICo-mB-czY"/>
                     <connections>
                         <outlet property="scribbleView" destination="JEp-TQ-1ad" id="rWg-xt-sqx"/>
+                        <segue destination="T6A-zC-xIZ" kind="presentation" identifier="ShowPalette" id="3aM-SK-I1N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1140" y="334"/>
+        </scene>
+        <!--Palette View Controller-->
+        <scene sceneID="CSz-5u-jEE">
+            <objects>
+                <viewController id="T6A-zC-xIZ" customClass="PaletteViewController" customModule="Scribble" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HLA-fC-eAN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uch-Ml-F6U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0IY-m0-iGw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stroke size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VC-0c-AL6">
+                                <rect key="frame" x="20" y="28" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="32" translatesAutoresizingMaskIntoConstraints="NO" id="1LK-i1-qQ9">
+                                <rect key="frame" x="18" y="69" width="564" height="31"/>
+                                <connections>
+                                    <action selector="sizeSliderChanged:" destination="T6A-zC-xIZ" eventType="valueChanged" id="5jz-IE-Z5p"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47h-Fy-QgN">
+                                <rect key="frame" x="20" y="115" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="47h-Fy-QgN" firstAttribute="trailing" secondItem="0IY-m0-iGw" secondAttribute="trailingMargin" id="AkD-bG-gVq"/>
+                            <constraint firstItem="8VC-0c-AL6" firstAttribute="top" secondItem="HLA-fC-eAN" secondAttribute="bottom" constant="8" id="OUF-tN-kST"/>
+                            <constraint firstItem="1LK-i1-qQ9" firstAttribute="leading" secondItem="0IY-m0-iGw" secondAttribute="leadingMargin" id="XCd-x8-1q4"/>
+                            <constraint firstItem="1LK-i1-qQ9" firstAttribute="trailing" secondItem="0IY-m0-iGw" secondAttribute="trailingMargin" id="dTe-Q1-ofP"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="8VC-0c-AL6" secondAttribute="leading" id="g3t-lE-Fdp"/>
+                            <constraint firstItem="1LK-i1-qQ9" firstAttribute="top" secondItem="8VC-0c-AL6" secondAttribute="bottom" constant="20" id="gkz-we-h9c"/>
+                            <constraint firstItem="47h-Fy-QgN" firstAttribute="top" secondItem="1LK-i1-qQ9" secondAttribute="bottom" constant="16" id="jp7-gH-weE"/>
+                            <constraint firstItem="47h-Fy-QgN" firstAttribute="leading" secondItem="0IY-m0-iGw" secondAttribute="leadingMargin" id="ni5-cQ-VN9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sliderSizeLabel" destination="47h-Fy-QgN" id="eS9-qk-ki8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F75-zh-MZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2027" y="334"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="68i-Yp-2bY">
