@@ -16,8 +16,9 @@
 		408C0B4B1D1AB416003237E3 /* ScribbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B4A1D1AB416003237E3 /* ScribbleUITests.swift */; };
 		408C0B5A1D1AB9A6003237E3 /* ScribbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B591D1AB9A6003237E3 /* ScribbleView.swift */; };
 		408C0B5C1D1ABA3F003237E3 /* DrawingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B5B1D1ABA3F003237E3 /* DrawingModel.swift */; };
-		408C0B691D1F292A003237E3 /* PaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B681D1F292A003237E3 /* PaletteViewController.swift */; };
 		408C0B631D1EF7DD003237E3 /* Scribble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B621D1EF7DD003237E3 /* Scribble.swift */; };
+		408C0B691D1F292A003237E3 /* PaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B681D1F292A003237E3 /* PaletteViewController.swift */; };
+		408C0B6B1D1F3DAD003237E3 /* Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C0B6A1D1F3DAD003237E3 /* Mediator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +41,11 @@
 /* Begin PBXFileReference section */
 		408C0B271D1AB416003237E3 /* Scribble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		408C0B2A1D1AB416003237E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		408C0B2C1D1AB416003237E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		408C0B2C1D1AB416003237E3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		408C0B2F1D1AB416003237E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		408C0B311D1AB416003237E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		408C0B341D1AB416003237E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		408C0B361D1AB416003237E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		408C0B361D1AB416003237E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Scribble/Info.plist; sourceTree = "<group>"; };
 		408C0B3B1D1AB416003237E3 /* ScribbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScribbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		408C0B3F1D1AB416003237E3 /* ScribbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribbleTests.swift; sourceTree = "<group>"; };
 		408C0B411D1AB416003237E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,8 +54,9 @@
 		408C0B4C1D1AB416003237E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		408C0B591D1AB9A6003237E3 /* ScribbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribbleView.swift; sourceTree = "<group>"; };
 		408C0B5B1D1ABA3F003237E3 /* DrawingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingModel.swift; sourceTree = "<group>"; };
-		408C0B681D1F292A003237E3 /* PaletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaletteViewController.swift; sourceTree = "<group>"; };
 		408C0B621D1EF7DD003237E3 /* Scribble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scribble.swift; sourceTree = "<group>"; };
+		408C0B681D1F292A003237E3 /* PaletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaletteViewController.swift; sourceTree = "<group>"; };
+		408C0B6A1D1F3DAD003237E3 /* Mediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mediator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				408C0B3E1D1AB416003237E3 /* ScribbleTests */,
 				408C0B491D1AB416003237E3 /* ScribbleUITests */,
 				408C0B281D1AB416003237E3 /* Products */,
+				408C0B361D1AB416003237E3 /* Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,7 +115,6 @@
 				408C0B2E1D1AB416003237E3 /* Main.storyboard */,
 				408C0B311D1AB416003237E3 /* Assets.xcassets */,
 				408C0B331D1AB416003237E3 /* LaunchScreen.storyboard */,
-				408C0B361D1AB416003237E3 /* Info.plist */,
 				408C0B681D1F292A003237E3 /* PaletteViewController.swift */,
 			);
 			path = Scribble;
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				408C0B621D1EF7DD003237E3 /* Scribble.swift */,
+				408C0B6A1D1F3DAD003237E3 /* Mediator.swift */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				408C0B2B1D1AB416003237E3 /* AppDelegate.swift in Sources */,
 				408C0B5C1D1ABA3F003237E3 /* DrawingModel.swift in Sources */,
 				408C0B5A1D1AB9A6003237E3 /* ScribbleView.swift in Sources */,
+				408C0B6B1D1F3DAD003237E3 /* Mediator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,16 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PaletteMediatorDelegate {
 
     @IBOutlet var scribbleView: ScribbleView!
     
     let scribble = Scribble()
+    var mediator:Mediator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         scribbleView.mark = scribble.rootStroke
+        mediator = Mediator(viewController: self)
+        mediator?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +34,14 @@ class ViewController: UIViewController {
         scribbleView.setNeedsDisplay()
     }
     
+    
+    @IBAction func penTapped(sender: AnyObject) {
+        mediator?.navigateToPalette()
+    }
 
+    func didSetPenSize(newSize: Float) {
+        NSLog("Pen size set to \(newSize)")
+    }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let loc = touches.first?.locationInView(scribbleView) {
@@ -57,6 +67,9 @@ class ViewController: UIViewController {
         
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        mediator?.prepareForSegue(segue)
+    }
     
 }
 
