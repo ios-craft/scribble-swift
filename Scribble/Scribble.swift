@@ -18,8 +18,8 @@ class Scribble {
         rootStroke = Stroke()
     }
     
-    func beginMark(location: CGPoint) {
-        let stroke = Stroke(location:location)
+    func beginMark(location: CGPoint, size: Float) {
+        let stroke = Stroke(location:location, size:size)
         currentStroke = stroke
         rootStroke.addChild(stroke)
     }
@@ -31,7 +31,7 @@ class Scribble {
     func finishMark(location: CGPoint) {
         guard let currentStroke = currentStroke else { return }
         if currentStroke.isEmpty() {
-            currentStroke.addChild(Dot(location: location))
+            currentStroke.addChild(Dot(location: location, size: currentStroke.size))
         }
     }
     

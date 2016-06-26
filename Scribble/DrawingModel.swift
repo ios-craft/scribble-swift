@@ -12,6 +12,7 @@ import UIKit
 protocol Mark {
     var location: CGPoint { get set }
     var children:[Mark] { get set }
+    var size:Float { get set }
 
     // more to come later
     func draw(ctx:CGContext)
@@ -23,6 +24,7 @@ protocol Mark {
 struct Vertex : Mark {
     var location: CGPoint
     var children:[Mark] = []
+    var size:Float = 0
     
     init(location:CGPoint) {
         self.location = location
@@ -37,13 +39,15 @@ struct Vertex : Mark {
 struct Dot : Mark {
     var location: CGPoint
     var children:[Mark] = []
+    var size:Float
     
-    init(location:CGPoint) {
+    init(location:CGPoint, size:Float) {
         self.location = location
+        self.size = size
     }    
     
     func draw(ctx:CGContext) {
-        let frame = CGRect(origin: location, size: CGSize(width: 4.0, height: 4.0))
+        let frame = CGRect(origin: location, size: CGSize(width: CGFloat(size), height: CGFloat(size)))
         CGContextSetFillColorWithColor(ctx, UIColor.blackColor().CGColor)
         CGContextFillEllipseInRect(ctx, frame)
     }
@@ -52,9 +56,11 @@ struct Dot : Mark {
 class Stroke : Mark {
     var location: CGPoint = CGPointZero
     var children:[Mark] = []
+    var size:Float = 1.0
     
-    init(location:CGPoint) {
+    init(location:CGPoint, size:Float) {
         self.location = location
+        self.size = size
     }
     
     init() {
@@ -67,7 +73,7 @@ class Stroke : Mark {
             mark.draw(context)
         }
         CGContextSetStrokeColorWithColor(context,UIColor.blackColor().CGColor);
-        CGContextSetLineWidth(context, 4.0)
+        CGContextSetLineWidth(context, CGFloat(size))
         CGContextSetLineCap(context, CGLineCap.Round)
         CGContextStrokePath(context);
     }

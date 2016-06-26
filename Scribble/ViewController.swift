@@ -14,6 +14,7 @@ class ViewController: UIViewController, PaletteMediatorDelegate {
     
     let scribble = Scribble()
     var mediator:Mediator?
+    var penSize:Float = 4.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +42,13 @@ class ViewController: UIViewController, PaletteMediatorDelegate {
 
     func didSetPenSize(newSize: Float) {
         NSLog("Pen size set to \(newSize)")
+        penSize = newSize
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let loc = touches.first?.locationInView(scribbleView) {
             print("TOUCH \(loc)")
-            scribble.beginMark(loc)
+            scribble.beginMark(loc, size:penSize)
         }
     }
     
